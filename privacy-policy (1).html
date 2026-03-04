@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1a3a15">
+<title>Политика конфиденциальности — Грядки</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest:  #1a3a15;
+  --green:   #2a6e20;
+  --green2:  #3a9030;
+  --green3:  #5ab848;
+  --pale:    #c8e6c2;
+  --cream:   #f8f4ed;
+  --warm:    #f2e8d8;
+  --warm2:   #e8d8c4;
+  --gold:    #d4930a;
+  --text:    #251a10;
+  --text2:   #7a5c3a;
+  --border:  #d4c0a4;
+  --shadow:  rgba(26,18,8,.13);
+  --radius:  16px;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.75;
+  font-size: 15px;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+.hdr {
+  background: linear-gradient(160deg, var(--forest) 0%, var(--green) 55%, #3a8a2a 100%);
+  padding: 48px 20px 40px;
+  padding-top: calc(48px + env(safe-area-inset-top, 0px));
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,.35);
+}
+
+.hdr::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0; right: 0;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 24px 24px 0 0;
+}
+
+.hdr .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: #fff;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.hdr .logo-icon {
+  font-size: 28px;
+  display: inline-block;
+  animation: sway 4s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-6deg); }
+  50% { transform: rotate(6deg); }
+}
+
+.hdr h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255,255,255,.85);
+  letter-spacing: 0.02em;
+}
+
+/* ── Container ── */
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 16px 60px;
+}
+
+/* ── Meta ── */
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: var(--warm);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text2);
+}
+
+.meta .dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
+}
+
+/* ── Sections ── */
+section {
+  margin-bottom: 24px;
+}
+
+section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--forest);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+section h2 .sec-icon {
+  font-size: 20px;
+}
+
+section p {
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+section ul {
+  list-style: none;
+  margin: 10px 0;
+}
+
+section ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+}
+
+section ul li::before {
+  content: '🌿';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 13px;
+}
+
+/* ── Highlight box ── */
+.tip-box {
+  background: var(--warm);
+  border: 1.5px solid var(--pale);
+  border-left: 4px solid var(--green);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 14px 16px;
+  margin: 14px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--forest);
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.tip-box .tip-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* ── Links ── */
+a {
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--green2);
+}
+
+/* ── Footer ── */
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text2);
+  padding-top: 28px;
+  border-top: 1.5px solid var(--border);
+  margin-top: 12px;
+}
+
+.footer .f-logo {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--forest);
+  margin-bottom: 4px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .hdr { padding: 36px 16px 32px; }
+  .container { padding: 16px 14px 48px; }
+  section h2 { font-size: 17px; }
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="logo"><span class="logo-icon">🌱</span> Грядки</div>
+  <h1>Политика конфиденциальности</h1>
+</header>
+
+<main class="container">
+
+  <div class="meta">
+    <span class="dot"></span> Дата вступления в силу: 4 марта 2026 г.
+    <span class="dot"></span> Последнее обновление: 4 марта 2026 г.
+  </div>
+
+  <section>
+    <h2><span class="sec-icon">📋</span> 1. Общие положения</h2>
+    <p>Настоящая Политика конфиденциальности описывает, каким образом мобильное приложение «Грядки» (далее — «Приложение», «мы», «нас») собирает, использует и защищает информацию, получаемую от пользователей.</p>
+    <p>Используя Приложение, вы соглашаетесь с условиями данной Политики. Если вы не согласны с ними, пожалуйста, прекратите использование Приложения.</p>
+  </section>
+
+  <section>
+    <h2><span class="sec-icon">📍</span> 2. Какие данные мы собираем</h2>
+    <p>Для корректной работы Приложение может запрашивать доступ к следующим данным:</p>
+    <ul>
+      <li><strong>Данные геолокации (GPS)</strong> — информация о вашем приблизительном или точном местоположении. Эти данные используются исключительно для определения погодных условий в вашем регионе и отображения актуального прогноза погоды.</li>
+    </ul>
+    <div class="tip-box">
+      <span class="tip-icon">☀️</span>
+      <span>Доступ к геолокации запрашивается только с вашего явного разрешения через системный диалог Android и используется исключительно для показа погоды.</span>
+    </div>
+    <p>Мы не собираем личные данные, такие как имя, адрес электронной почты, номер телефона или платёжную информацию.</p>
+  </section>
+
+  <section>
+    <h2><span class="sec-icon">🎯</span> 3. Цели обработки данных</h2>
+    <p>Данные геолокации используются исключительно для:</p>
+    <ul>
+      <li>Определения вашего местоположения с целью отображения актуальной погоды и прогноза</li>
+      <li>Подбора рекомендаций по уходу за растениями с учётом погодных условий</li>
+    </ul>
+    <div class="tip-box">
+      <span class="tip-icon">🔒</span>
+      <span>Мы не используем данные геолокации для рекламы, аналитики поведения или каких-либо иных целей, кроме отображения погоды.</span>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="sec-icon">🤝</span> 4. Передача данных третьим лицам</h2>
+    <p>Для получения данных о погоде координаты вашего местоположения могут передаваться стороннему сервису прогноза погоды (weather API). При этом передаются только координаты — без каких-либо персональных данных.</p>
+    <p>Мы не продаём и не передаём ваши данные третьим лицам в иных целях, за исключением случаев, когда это необходимо для выполнения требований законодательства.</p>
+  </section>
+
+  <section>
+    <h2><span class="sec-icon">🛡️</span> 5. Хранение и защита данных</h2>
+    <p>Данные геолокации обрабатываются в реальном времени для получения прогноза погоды и не сохраняются на наших серверах. Все пользовательские данные (грядки, растения, записи журнала) хранятся локально на вашем устройстве и не передаются на внешние серверы.</p>
+  </section>
+
+  <section>
+    <h2><span class="sec-icon">⚙️</span> 6. Права пользователя</h2>
+    <p>Вы имеете право:</p>
+    <ul>
+      <li>Отозвать разрешение на доступ к геолокации в любое время через настройки устройства</li>
+      <li>Запросить информацию о данных, которые мы обрабатываем</li>
+      <li>Удалить все данные Приложения, очистив хранилище через настройки Android</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="sec-icon">🔗</span> 7. Сторонние сервисы</h2>
+    <p>Приложение может использовать сторонние сервисы, имеющие собственные политики конфиденциальности:</p>
+    <ul>
+      <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="sec-icon">👶</span> 8. Дети</h2>
+    <p>Приложение не предназначено для детей младше 13 лет. Мы сознательно не собираем персональные данные у лиц младше 13 лет. Если вы считаете, что ваш ребёнок предоставил нам свои данные, свяжитесь с нами — мы незамедлительно удалим такую информацию.</p>
+  </section>
+
+  <section>
+    <h2><span class="sec-icon">📝</span> 9. Изменения в Политике</h2>
+    <p>Мы вправе обновлять настоящую Политику конфиденциальности. Обо всех существенных изменениях мы уведомим путём публикации обновлённой версии на данной странице с указанием новой даты. Рекомендуем периодически проверять эту страницу.</p>
+  </section>
+
+  <section>
+    <h2><span class="sec-icon">✉️</span> 10. Контакты</h2>
+    <p>Если у вас есть вопросы относительно нашей Политики конфиденциальности, свяжитесь с нами:</p>
+    <ul>
+      <li>Email: <a href="mailto:Pjakubsevicus@gmail.com">Pjakubsevicus@gmail.com</a></li>
+    </ul>
+  </section>
+
+  <div class="footer">
+    <div class="f-logo">🌱 Грядки</div>
+    © 2026 Грядки — умный огород. Все права защищены.
+  </div>
+
+</main>
+
+</body>
+</html>
